@@ -4,7 +4,7 @@ function geraNumerAleatorio (min,max){
     return Math.floor(Math.random()*(max-min+1)+ min)
 }
 for (let contador = 1; contador<=1000; contador++){
-    let num = geraNumerAleatorio(2,12)
+    let num = geraNumerAleatorio(1,6) + geraNumerAleatorio(1,6)
     arrayContador[num-2]++
 }
 
