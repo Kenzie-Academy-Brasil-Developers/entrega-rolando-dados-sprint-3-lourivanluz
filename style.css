@@ -19,3 +19,12 @@ p{
 h1{
     color: rgb(32, 32, 32);
 }
+.flex{
+    flex-direction: column;
+}
+@media (min-width:650px) {
+     .flex{
+        flex-direction:row;
+        justify-content: space-around;
+    } 
+}

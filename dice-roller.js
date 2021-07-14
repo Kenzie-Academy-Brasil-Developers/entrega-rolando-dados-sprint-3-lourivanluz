@@ -20,14 +20,19 @@ function formataResposta (array){
 function criaBarras (array){
 
     for (let i = 0; i<array.length;i++){
-        let div = document.body.appendChild(document.createElement('div'))
+        let div = document.querySelector('.barras').appendChild(document.createElement('div'))
         div.setAttribute('style','height:30px; margin-bottom:5px;background-color:grey; width: '+array[i]+'px')
     }
 
 }
 
 let resposta = formataResposta(arrayContador)
-document.body.appendChild(document.createElement('p')).innerHTML= "Resposta: <br>"+ resposta
+document.body.appendChild(document.createElement('div')).classList.add('flex')
+/* setAttribute('class','flex') */
+document.querySelector('.flex').setAttribute('style','display: flex;align-items: center;flex-wrap: wrap;')
+
+document.querySelector('.flex').appendChild(document.createElement('p')).innerHTML= "Resposta: <br>"+ resposta
+document.querySelector('.flex').appendChild(document.createElement('div')).setAttribute('class','barras')
 criaBarras(arrayContador)
 
 
